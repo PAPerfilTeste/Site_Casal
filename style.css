@@ -14,8 +14,9 @@ body {
 #names {
     color: #ff4d4d;
     font-family: 'Qwigley', cursive;
-    font-size: 2.5em;
+    font-size: 3em;
     text-align: center;
+    text-decoration: underline;
 }
 
 #principal_text {
