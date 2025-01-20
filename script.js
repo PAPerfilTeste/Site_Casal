@@ -67,3 +67,21 @@ function prevSlide() {
 
 // Configuração para avançar automaticamente a cada 5 segundos
 setInterval(nextSlide, 5000);
+
+// ---> Script para a Música <---
+
+document.addEventListener('DOMContentLoaded', function () {
+    const audio = document.getElementById('background-music');
+
+    // Tenta reproduzir automaticamente ao carregar
+    audio.play().catch(() => {
+        console.log('Reprodução automática bloqueada. Aguarde interação do usuário.');
+    });
+
+    // Iniciar a música após interação do usuário (clicar em qualquer lugar da página)
+    document.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+        }
+    });
+});
